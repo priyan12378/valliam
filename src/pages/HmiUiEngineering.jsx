@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Layout, Eye, Mic, Glasses, 
-  ShieldCheck, MonitorPlay, Sparkles, UserCog, Activity 
+  ShieldCheck, MonitorPlay, Sparkles, UserCog 
 } from 'lucide-react';
 
 export default function HmiUiEngineering() {
@@ -41,64 +41,35 @@ export default function HmiUiEngineering() {
   return (
     <main className="bg-white overflow-hidden pt-20 min-h-screen">
       
-      {/* =====================================================================================
-          1. HERO SECTION (ENHANCED TAG VISIBILITY)
-         ===================================================================================== */}
-      <section className="relative py-32 bg-[#050505] text-white overflow-hidden min-h-[80vh] flex items-center">
-        
-        {/* === ADVANCED CSS BACKGROUND === */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-            {/* Dark Base */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#0a101a] to-[#050505]"></div>
-            
-            {/* HUD Grid Pattern */}
-            <div className="absolute inset-0 opacity-20"
-                 style={{ 
-                     backgroundImage: 'linear-gradient(rgba(0, 123, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 123, 255, 0.1) 1px, transparent 1px)', 
-                     backgroundSize: '60px 60px',
-                     maskImage: 'radial-gradient(circle at 50% 50%, black 50%, transparent 100%)'
-                 }}>
-            </div>
-
-            {/* Glowing Orbs */}
-            <div className="absolute top-1/4 -right-20 w-[500px] h-[500px] bg-[#007BFF] opacity-10 blur-[120px] rounded-full animate-pulse"></div>
-            
-            {/* Scanning Line Effect */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#007BFF]/40 to-transparent animate-scan"></div>
+      {/* 1. HERO SECTION */}
+      <section className="relative py-24 bg-[#050505] text-white">
+        <div className="absolute inset-0 opacity-20">
+           <div className="w-full h-full bg-[url('/src/assets/tech-grid.png')] bg-repeat opacity-30"></div>
+           <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
         </div>
 
-        <div className="max-w-[1440px] mx-auto px-6 relative z-10 w-full">
+        <div className="max-w-[1440px] mx-auto px-6 relative z-20">
           <div className="lg:w-3/4">
-            
-            {/* UPDATED TAG: High-visibility white text and stronger background */}
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#007BFF]/25 border border-[#007BFF]/50 rounded-full mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(0,123,255,0.3)]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#007BFF]/10 border border-[#007BFF]/30 rounded-full mb-6">
               <Sparkles size={14} className="text-[#007BFF]" />
-              <span className="text-[11px] font-extrabold tracking-[0.25em] text-white uppercase" style={{ fontFamily: 'Rajdhani' }}>
+              <span className="text-xs font-bold tracking-widest text-[#007BFF] uppercase" style={{ fontFamily: 'Rajdhani' }}>
                 Adaptive Interfaces
               </span>
             </div>
             
-            {/* Title */}
-            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tight" style={{ fontFamily: 'Rajdhani' }}>
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight" style={{ fontFamily: 'Rajdhani' }}>
               HMI / UI <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#007BFF] via-[#3395ff] to-[#00C6FF]">
-                Engineering
-              </span>
+              <span className="text-[#007BFF]">Engineering</span>
             </h1>
-
-            {/* Description */}
-            <div className="flex flex-col md:flex-row gap-8 items-start border-l-4 border-[#007BFF] pl-8">
-                <p className="text-xl text-gray-400 leading-relaxed max-w-2xl font-light" style={{ fontFamily: 'IBM Plex Sans' }}>
-                  We design and engineer future-ready HMI/UI platforms that are <span className="text-white font-medium">intelligent, context-aware</span>, and optimized for embedded environments. Our HMIs are built to evolve through software-defined updates.
-                </p>
-            </div>
+            
+            <p className="text-xl text-gray-400 mb-10 leading-relaxed max-w-2xl border-l-4 border-[#007BFF] pl-6" style={{ fontFamily: 'IBM Plex Sans' }}>
+              We design and engineer future-ready HMI/UI platforms that are intelligent, context-aware, and optimized for embedded environments. Our HMIs are built to evolve through software-defined updates and user personalization.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* =====================================================================================
-          2. CAPABILITIES GRID (KEPT ORIGINAL)
-         ===================================================================================== */}
+      {/* 2. CAPABILITIES GRID */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-[1440px] mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16">
@@ -125,20 +96,10 @@ export default function HmiUiEngineering() {
         </div>
       </section>
 
-      {/* =====================================================================================
-          3. LONG-TERM VISION (KEPT ORIGINAL)
-         ===================================================================================== */}
-      <section className="py-32 bg-black relative overflow-hidden text-center">
-        <div className="absolute inset-0 opacity-10" 
-             style={{ backgroundImage: 'radial-gradient(#444 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
-        </div>
-
+      {/* 3. LONG-TERM VISION */}
+      <section className="py-24 bg-black relative overflow-hidden text-center">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <div className="mb-8 flex justify-center">
-            <div className="p-4 rounded-full bg-[#007BFF]/5 border border-[#007BFF]/20">
-                <Eye className="text-[#007BFF] animate-pulse" size={48} />
-            </div>
-          </div>
+          <Eye className="mx-auto text-[#007BFF] mb-6 animate-pulse" size={48} />
           <h2 className="text-sm font-bold text-gray-500 mb-6 tracking-[0.3em] uppercase" style={{ fontFamily: 'Rajdhani' }}>Our Vision</h2>
           <h3 className="text-3xl md:text-5xl font-light text-white leading-tight" style={{ fontFamily: 'IBM Plex Sans' }}>
             "To create interfaces that <span className="text-[#007BFF] font-semibold">adapt to users, context, and environment</span>, transforming interfaces into intelligent companions."
@@ -146,19 +107,6 @@ export default function HmiUiEngineering() {
           <div className="mt-12 w-24 h-1 bg-gradient-to-r from-[#007BFF] to-[#E60000] mx-auto opacity-70"></div>
         </div>
       </section>
-
-      {/* CSS Animation for Scan Line */}
-      <style jsx>{`
-        @keyframes scan {
-          0% { top: 0; opacity: 0; }
-          50% { opacity: 1; }
-          100% { top: 100%; opacity: 0; }
-        }
-        .animate-scan {
-          position: absolute;
-          animation: scan 4s linear infinite;
-        }
-      `}</style>
     </main>
   );
 }

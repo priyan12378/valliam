@@ -41,65 +41,38 @@ export default function LinuxAndroidRTOS() {
   return (
     <main className="bg-white overflow-hidden pt-20 min-h-screen">
       
-      {/* =====================================================================================
-          1. HERO SECTION (UPDATED: PRO BLUE OS ENGINEERING DESIGN)
-         ===================================================================================== */}
-      <section className="relative py-32 bg-[#050505] text-white overflow-hidden min-h-[80vh] flex items-center">
-        
-        {/* === ADVANCED CSS BACKGROUND (Kernel/Terminal Theme) === */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-            {/* Dark Base */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#0a101a] to-[#050505]"></div>
-            
-            {/* Code/Terminal Grid Pattern */}
-            <div className="absolute inset-0 opacity-15"
-                 style={{ 
-                     backgroundImage: 'linear-gradient(rgba(0, 123, 255, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 123, 255, 0.15) 1px, transparent 1px)', 
-                     backgroundSize: '40px 40px',
-                     maskImage: 'radial-gradient(circle at 50% 50%, black 50%, transparent 100%)'
-                 }}>
-            </div>
-
-            {/* Glowing OS Core */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#007BFF] opacity-10 blur-[120px] rounded-full animate-pulse"></div>
-            
-            {/* Terminal Decorative Lines */}
-            <div className="absolute left-0 top-1/4 w-full h-[1px] bg-gradient-to-r from-[#007BFF]/0 via-[#007BFF]/40 to-[#007BFF]/0"></div>
-            <div className="absolute left-0 bottom-1/4 w-full h-[1px] bg-gradient-to-r from-[#007BFF]/0 via-[#007BFF]/20 to-[#007BFF]/0"></div>
+      {/* 1. HERO SECTION */}
+      <section className="relative py-24 bg-[#050505] text-white">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-20">
+           <div className="absolute inset-0" 
+                style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
+           </div>
+           <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"></div>
         </div>
 
-        <div className="max-w-[1440px] mx-auto px-6 relative z-10 w-full">
+        <div className="max-w-[1440px] mx-auto px-6 relative z-20">
           <div className="lg:w-3/4">
-            
-            {/* HIGH-VISIBILITY TAG */}
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#007BFF]/25 border border-[#007BFF]/50 rounded-full mb-8 backdrop-blur-md shadow-[0_0_20px_rgba(0,123,255,0.3)]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#007BFF]/10 border border-[#007BFF]/30 rounded-full mb-6">
               <Layers size={14} className="text-[#007BFF]" />
-              <span className="text-[11px] font-extrabold tracking-[0.25em] text-white uppercase" style={{ fontFamily: 'Rajdhani' }}>
+              <span className="text-xs font-bold tracking-widest text-[#007BFF] uppercase" style={{ fontFamily: 'Rajdhani' }}>
                 OS Platform Engineering
               </span>
             </div>
             
-            {/* Title */}
-            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tight" style={{ fontFamily: 'Rajdhani' }}>
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight" style={{ fontFamily: 'Rajdhani' }}>
               Linux / Android <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#007BFF] via-[#3395ff] to-[#00C6FF]">
-                RTOS Porting
-              </span>
+              <span className="text-[#007BFF]">RTOS Porting</span>
             </h1>
-
-            {/* Description */}
-            <div className="flex flex-col md:flex-row gap-8 items-start border-l-4 border-[#007BFF] pl-8">
-                <p className="text-xl text-gray-400 leading-relaxed max-w-2xl font-light" style={{ fontFamily: 'IBM Plex Sans' }}>
-                  We engineer Linux, Android, and RTOS platforms as the foundation for <span className="text-white font-medium">software-defined, connected products</span>. Our services ensure performance, security, and long-term maintainability.
-                </p>
-            </div>
+            
+            <p className="text-xl text-gray-400 mb-10 leading-relaxed max-w-2xl border-l-4 border-[#007BFF] pl-6" style={{ fontFamily: 'IBM Plex Sans' }}>
+              We engineer Linux, Android, and RTOS platforms as the foundation for software-defined, connected products. Our services ensure performance, security, and long-term maintainability.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* =====================================================================================
-          2. CAPABILITIES GRID (KEPT ORIGINAL)
-         ===================================================================================== */}
+      {/* 2. CAPABILITIES GRID */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-[1440px] mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16">
@@ -133,10 +106,9 @@ export default function LinuxAndroidRTOS() {
         </div>
       </section>
 
-      {/* =====================================================================================
-          3. LONG-TERM VISION (KEPT ORIGINAL)
-         ===================================================================================== */}
+      {/* 3. LONG-TERM VISION */}
       <section className="py-24 bg-black relative overflow-hidden">
+        {/* Abstract OS Kernel Visual */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px]">
            <div className="w-full h-full border border-gray-800 opacity-20 transform -skew-x-12"></div>
            <div className="absolute top-4 left-4 w-full h-full border border-[#007BFF]/20 opacity-20 transform -skew-x-12"></div>
@@ -155,7 +127,7 @@ export default function LinuxAndroidRTOS() {
             "To enable software-defined products that evolve through <span className="text-[#007BFF] font-semibold">continuous OS and feature updates</span> over their lifecycle."
           </h3>
           
-          <div className="mt-12 w-32 h-1 bg-gradient-to-r from-[#007BFF] via-white to-[#007BFF] mx-auto opacity-50 shadow-[0_0_10px_rgba(0,123,255,0.5)]"></div>
+          <div className="mt-12 w-32 h-1 bg-gradient-to-r from-[#007BFF] via-white to-[#007BFF] mx-auto opacity-50"></div>
         </div>
       </section>
     </main>
