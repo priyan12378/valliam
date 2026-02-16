@@ -1,16 +1,19 @@
 import CompanyAbout from '../components/company/CompanyAbout';
-import CompanyWhatWeDo from '../components/company/CompanyWhatWeDo'; // New
+import CompanyWhatWeDo from '../components/company/CompanyWhatWeDo';
 import CompanyVision from '../components/company/CompanyVision';
 import CompanyMission from '../components/company/CompanyMission';
-import CompanyRoadmap from '../components/company/CompanyRoadmap'; // New
+import CompanyAdvantages from '../components/company/CompanyAdvantages';
+import CompanyRoadmap from '../components/company/CompanyRoadmap';
 
 export default function Company() {
   return (
-    <main className="bg-white overflow-hidden pt-20">
+    // REMOVED "pt-20" here. Now it starts directly after the Navbar.
+    <main className="bg-white overflow-hidden">
       <CompanyAbout />
       <CompanyWhatWeDo />
       <CompanyVision />
       <CompanyMission />
+      <CompanyAdvantages />
       <CompanyRoadmap />
     </main>
   );

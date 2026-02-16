@@ -11,7 +11,8 @@ export default function CompanyAbout() {
   ];
 
   return (
-    <section className="relative py-20 lg:py-32 bg-white">
+    // UPDATED PADDING: Reduced top padding (pt-16 lg:pt-24) to reduce the gap
+    <section className="relative pt-16 pb-20 lg:pt-24 lg:pb-32 bg-white">
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
